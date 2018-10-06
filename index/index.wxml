@@ -1,0 +1,44 @@
+<view class="container" style="text-align:center;">
+  <view class="page-section">
+    <view class="page-section-title">HSK Level</view>
+    <view>
+      <radio-group bindchange="radioHSKChange">
+      <label wx:for="{{items}}" wx:key="{{item.value}}">
+      <view class="radio-main">
+        <view class="radio-container">
+          <radio value="{{item.value}}" checked="{{item.checked}}"/>
+        </view>
+        <view class="radio-name-container" style="text-align:center;">{{item.name}}</view>
+      </view>
+      </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">Lesson</view>
+    <view>
+      <radio-group bindchange="radioLessonChange">
+      <label wx:for="{{lessons}}" wx:key="{{item.value}}">
+      <view class="radio-main">
+        <view class="radio-container">
+          <radio value="{{item.value}}" checked="{{item.checked}}"/>
+        </view><br/>
+        <view class="radio-name-container">{{item.name}}</view>
+      </view>
+      </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="page-section">
+    <navigator url="../audio/audio" hover-class="navigator-hover">
+    
+      <button type="primary">HSK {{dispHSK}}-{{dispLesson}} Workbook Audio</button>
+    </navigator>
+  </view>
+  <view class="page-section">
+    <navigator url="../text/text" hover-class="navigator-hover">
+    
+      <button type="primary">HSK {{dispHSK}}-{{dispLesson}} Workbook Text</button>
+    </navigator>
+  </view>
+</view>
