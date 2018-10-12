@@ -1,11 +1,16 @@
 # WeChat-HSK
 汉语水平考试 Hànyǔ Shuǐpíng Kǎoshì (HSK) mini program
 
-Work in progress HSK 3-1 to 3-8 (available as of 2018-10-12, more being added each week)
+Work in progress HSK 2-1 and 3-1 to 3-8 (available as of 2018-10-12, more being added each week)
 
 Allows students to practice the workbook listening exercises, textbook texts and textbook listening exercises.
 
-WeChat Structure:
+<h4>Server Domain Resources:</h4>
+MySQL database containing the HSKWBText table.
+/includes/getWorkBookAnswers.php <== php script to retrieve workbook answer text from the MySQL database
+/audio/~.m4a <== Workbook audio files
+
+<h4>WeChat Structure:</h4>
 Pages
   - audio
     - audio.js (loads audio files from {{yourdomain}}/audio/HSK{{HSK}}{{Lesson}}/{{HSK}}-{{Lesson}}-{{item.src}}.m4a)
