@@ -1,0 +1,15 @@
+CREATE TABLE HSKWBText (
+ id INT NOT NULL AUTO_INCREMENT ,
+ HSK TINYINT NOT NULL ,
+ Lesson TINYINT  NOT NULL,
+ TextNumber TINYINT  NOT NULL,
+ Line1 varchar( 512 )  NOT NULL,
+ Line2 varchar( 512 ) NULL,
+ Line3 varchar( 512 ) NULL,
+ Line4 varchar( 512 ) NULL,
+ Line5 varchar( 512 ) NULL,
+ Line6 varchar( 512 ) NULL,
+ Line7 varchar( 512 ) NULL,
+ Line8 varchar( 512 ) NULL,
+PRIMARY KEY (  id )
+)CHARACTER SET utf8 COLLATE utf8_general_ci;
