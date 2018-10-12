@@ -8,7 +8,7 @@ Allows students to practice the workbook listening exercises, textbook texts and
 MySQL database containing the HSKWBText table.<br/>
 /includes/getWorkBookAnswers.php <== php script to retrieve workbook answer text from the MySQL database<br/>
 /audio/~.m4a <== Workbook audio files<br/>
-<h4>WeChat Project:</h4><br/>
+<h4>WeChat Project:</h4>
 Pages<br/>
 &nbsp;&nbsp;- audio<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- audio.js (loads audio files from {{yourdomain}}/audio/HSK{{HSK}}{{Lesson}}/{{HSK}}-{{Lesson}}-{{item.src}}.m4a)<br/>
