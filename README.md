@@ -4,6 +4,9 @@
 Work in progress: HSK Lessons 2-1,2-2,2-3,3-1,3-2 and 3-5 to 3-11 (available as of 2018-10-13, more being added each day)<br/>
 <br/>
 Allows students to practice the workbook listening exercises, textbook texts and textbook listening exercises.<br/>
+<br/>
+Demo of HTML5 implementation: <a href="https://www.stephenmccready.asia/mi/listen.php" target="_blank">https://www.stephenmccready.asia/mi/listen.php</a><br/>
+<br/>
 <h4>Server Domain Resources:</h4>
 MySQL database containing the HSKWBText table.<br/>
 /includes/getWorkBookAnswers.php <== php script to retrieve workbook answer text from the MySQL database<br/>
