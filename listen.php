@@ -12,12 +12,16 @@ include_once 'includes/db_connect.php';
 <style>
 *,html,body{margin:0;padding:0;}
 .container-fluid{padding:0;}
+#head{padding:0.85em;background-color:#eee;}
+#toggleBox{padding:0 0.85em 0.85em 0.85em;background-color:#eee;}
 .btn-lg{min-width:2.85em;}
 .btn-group{margin-bottom:.25em;}
 .row label{width:100%;}
-#head{padding:1em;background-color:#eee;}
 #option-container{width:100%;}
 #option-container label{width:50%;}
+#HSKtitle{padding-top:.85em;}
+#audio-container{padding-top:.85em;}
+.audLabel{font-size:2em;vertical-align:middle;line-height:2em;}
 #text-container h5{text-align:center;}
 .card-body{padding:5px !important;}
 </style>
@@ -28,7 +32,7 @@ include_once 'includes/db_connect.php';
 <div id="head">
 	<form>
 	<div class="form-group">
-		<h4>HSK</h4>
+		<h5>HSK</h5>
 		<div class="btn-group btn-group-toggle" data-toggle="buttons">
 			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK1" value="01"> 1</label>
 			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK2" value="02"> 2</label>
@@ -70,7 +74,10 @@ include_once 'includes/db_connect.php';
 			<label class="btn btn-lg btn-success"><input type="radio" name="Lesson" id="Lesson20" value="20"> 20</label>
 		</div>
 	</div>
-	<div id="option-container" class="btn-group btn-group-toggle" data-toggle="buttons">
+</form>
+</div><!-- container -->
+<div id="toggleBox" class="sticky-top">
+	<div id="option-container" class="btn-group btn-group-toggle sticky-top" data-toggle="buttons">
   		<label class="btn btn-success active">
     		<input type="radio" name="display-option" id="audio-display" value="audio" checked> Audio
   		</label>
@@ -78,100 +85,100 @@ include_once 'includes/db_connect.php';
     		<input type="radio" name="display-option" id="text-display" value="text"> Text
   		</label>
 	</div>
-</form>
-</div><!-- container -->
+	<h5 id="HSKtitle" class="text-center">HSK 3 Lesson 1</h5>
+</div>
 <div id="audio-container">
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-4"><label id="label1">HSK 03-01 1</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">1
 			<audio id="aud1" controls="controls">
 			<source id="src1" src="audio/HSK0301/03-01-01.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label2">HSK 03-01 2</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">2
 			<audio id="aud2" controls="controls">
 			<source id="src2" src="audio/HSK0301/03-01-02.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label3">HSK 03-01 3</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">3
 			<audio id="aud3" controls="controls">
 			<source id="src3" src="audio/HSK0301/03-01-03.m4a">Your browser does not support the audio format.</audio>
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-4"><label id="label4">HSK 3-01 4</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">4
 			<audio id="aud4" controls="controls">
 			<source id="src4" src="audio/HSK0301/03-01-04.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label5">HSK 3-01 5</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">5
 			<audio id="aud5" controls="controls">
 			<source id="src5" src="audio/HSK0301/03-01-05.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label6">HSK 3-01 6</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">6
 			<audio id="aud6" controls="controls">
 			<source id="src6" src="audio/HSK0301/03-01-06.m4a">Your browser does not support the audio format.</audio>
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-4"><label id="label7">HSK 3-01 7</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">7
 			<audio id="aud7" controls="controls">
 			<source id="src7" src="audio/HSK0301/03-01-07.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label8">HSK 3-01 8</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">8
 			<audio id="aud8" controls="controls">
 			<source id="src8" src="audio/HSK0301/03-01-08.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label9">HSK 3-01 9</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">9
 			<audio id="aud9" controls="controls">
 			<source id="src9" src="audio/HSK0301/03-01-09.m4a">Your browser does not support the audio format.</audio>
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-4"><label id="label10">HSK 3-01 10</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">10
 			<audio id="aud10" controls="controls">
 			<source id="src10" src="audio/HSK0301/03-01-10.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label11">HSK 3-01 11</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">11
 			<audio id="aud11" controls="controls">
 			<source id="src11" src="audio/HSK0301/03-01-11.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label12">HSK 3-01 12</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">12
 			<audio id="aud12" controls="controls">
 			<source id="src12" src="audio/HSK0301/03-01-12.m4a">Your browser does not support the audio format.</audio>
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-4"><label id="label13">HSK 3-01 13</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">13
 			<audio id="aud13" controls="controls">
 			<source id="src13" src="audio/HSK0301/03-01-13.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label14">HSK 3-01 14</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">14
 			<audio id="aud14" controls="controls">
 			<source id="src14" src="audio/HSK0301/03-01-14.m4a">Your browser does not support the audio format.</audio>
 		</div>
-		<div class="col-xs-12 col-sm-4"><label id="label15">HSK 3-01 15</label><br/>
+		<div class="col-xs-11 col-sm-4 audLabel">15
 			<audio id="aud15" controls="controls">
 			<source id="src15" src="audio/HSK0301/03-01-15.m4a">Your browser does not support the audio format.</audio>
 		</div>
 	</div>
 	<div id="aud16-20">
 		<div class="row text-center">
-			<div class="col-xs-12 col-sm-4"><label id="label16">HSK 3-01 16</label><br/>
+			<div class="col-xs-11 col-sm-4 audLabel">16
 				<audio id="aud16" controls="controls">
 				<source id="src16" src="audio/HSK0301/03-01-16.m4a">Your browser does not support the audio format.</audio>
 			</div>
-			<div class="col-xs-12 col-sm-4"><label id="label17">HSK 3-01 17</label><br/>
+			<div class="col-xs-11 col-sm-4 audLabel">17
 				<audio id="aud17" controls="controls">
 				<source id="src17" src="audio/HSK0301/03-01-17.m4a">Your browser does not support the audio format.</audio>
 			</div>
-			<div class="col-xs-12 col-sm-4"><label id="label18">HSK 3-01 18</label><br/>
+			<div class="col-xs-11 col-sm-4 audLabel">18
 				<audio id="aud18" controls="controls">
 				<source id="src18" src="audio/HSK0301/03-01-18.m4a">Your browser does not support the audio format.</audio>
 			</div>
 		</div>
 		<div class="row text-center">
-			<div class="col-xs-12 col-sm-4"><label id="label19">HSK 3-01 19</label><br/>
+			<div class="col-xs-11 col-sm-4 audLabel">19
 				<audio id="aud19" controls="controls">
 				<source id="src19" src="audio/HSK0301/03-01-19.m4a">Your browser does not support the audio format.</audio>
 			</div>
-			<div class="col-xs-12 col-sm-4"><label id="label20">HSK 3-01 20</label><br/>
+			<div class="col-xs-11 col-sm-4 audLabel">20
 				<audio id="aud20" controls="controls">
 				<source id="src20" src="audio/HSK0301/03-01-20.m4a">Your browser does not support the audio format.</audio>
 			</div>
@@ -216,19 +223,15 @@ $(document).ready(function() {
 			if(i<10){
 				source.src = "audio/HSK"+$('input[name=HSK]:checked').val()+$('input[name=Lesson]:checked').val()+"/"
 					+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val()+"-0"+i.toString()+".m4a";
-				$("#label"+i.toString()).text("HSK "+$('input[name=HSK]:checked').val()
-												+"-"+$('input[name=Lesson]:checked').val()
-												+" "+i.toString());
 			} else {
 				source.src = "audio/HSK"+$('input[name=HSK]:checked').val()+$('input[name=Lesson]:checked').val()+"/"
 					+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val()+"-"+i.toString()+".m4a";
-				$("#label"+i.toString()).text("HSK "+$('input[name=HSK]:checked').val()
-												+"-"+$('input[name=Lesson]:checked').val()
-												+" "+i.toString());
 			}
 			audio.load();
 		}
 		loadText();
+		$('#HSKtitle').html("HSK "+$('input[name=HSK]:checked').val().replace(/^[0]+/g,"")
+							+"&nbsp;Lesson "+$('input[name=Lesson]:checked').val().replace(/^[0]+/g,""));
 		$(document).attr("title", "HSK "+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val());
     });
 	
@@ -245,6 +248,8 @@ $(document).ready(function() {
    	$('#text-container').hide();
    	loadText();
 	$(document).attr("title", "HSK "+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val());
+	$('#HSKtitle').html("HSK "+$('input[name=HSK]:checked').val().replace(/^[0]+/g,"")
+							+"&nbsp;Lesson "+$('input[name=Lesson]:checked').val().replace(/^[0]+/g,""));
 }); /* $(document).ready */
 function loadText() {
 	$("#text-container").html("");
