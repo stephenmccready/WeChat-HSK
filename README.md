@@ -1,7 +1,10 @@
 # WeChat-HSK
 汉语水平考试 Hànyǔ Shuǐpíng Kǎoshì (HSK) mini program<br/>
 <br/>
-Work in progress: HSK Lessons 2-1,2-2,2-3,3-1 to 3-11 (available as of 2018-10-13, more being added each day)<br/>
+Work in progress:<br/>
+HSK2 Lessons: 1 thru 3<br/>
+HSK3 Lessons: 1 thru 12 <br/>
+(<i>available as of 2018-10-17, more being added each day</i>)<br/>
 <br/>
 Allows students to practice the workbook listening exercises, textbook texts and textbook listening exercises.<br/>
 <br/>
