@@ -12,12 +12,12 @@ Demo of HTML5 implementation: <a href="https://www.stephenmccready.asia/mi/liste
 <br/>
 <h4>Server Domain Resources:</h4>
 MySQL database containing the HSKWBText table.<br/>
-/includes/getWorkBookAnswers.php <== php script to retrieve workbook answer text from the MySQL database<br/>
-/audio/~.m4a <== Workbook audio files<br/>
+/includes/getWorkBookAnswers.php <== <i>php script to retrieve workbook answer text from the MySQL database</i><br/>
+/audio/~.m4a <== <i>Workbook audio files</i><br/>
 <h4>WeChat Project:</h4>
 Pages<br/>
 &nbsp;&nbsp;- audio<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- audio.js (loads audio files from {{yourdomain}}/audio/HSK{{HSK}}{{Lesson}}/{{HSK}}-{{Lesson}}-{{item.src}}.m4a)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- audio.js (loads audio files from {{yourdomain}}/audio/{{HSK}}-{{Lesson}}-{{item.src}}.m4a)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- audio.json<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- audio.wxml<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- audio.wxss<br/>
