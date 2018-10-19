@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/css/bootstrap.min.css">
 <style>
 *,html,body{margin:0;padding:0;}
-.container-fluid{padding:0;}
+.container-fluid{margin:0;padding:0;}
 #head{padding:0.85em;background-color:#eee;}
 #toggleBox{padding:0 0.85em 0.85em 0.85em;background-color:#eee;}
 .btn-lg{min-width:2.85em;}
@@ -17,10 +17,12 @@
 #option-container{width:100%;}
 #option-container label{width:50%;}
 #HSKtitle{padding-top:.85em;}
-#audio-container{padding-top:.85em;}
-.audLabel{font-size:2em;}
-.audCont{padding-top:0.5em;display:inline-block;vertical-align: middle;}
-.audX{display:inline-block;vertical-align: middle;}
+#audio-container{margin-top:2em;}
+.row{padding:0;margin:0;width:100%;}
+.audLabel{font-size:2em;padding:0;margin:0;}
+.audCont{padding-top:0.5em;display:inline-block;vertical-align:middle;}
+.audX{display:inline-block;vertical-align:middle;}
+.audbtn{border:1px solid silver;}
 #text-container h5{text-align:center;}
 .card-body{padding:5px !important;}
 </style>
@@ -33,12 +35,12 @@
 	<div class="form-group">
 		<h5>HSK</h5>
 		<div class="btn-group btn-group-toggle" data-toggle="buttons">
-			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK1" value="01"> 一</label>
+			<label class="btn btn-lg btn-disabled"><input type="radio" name="HSK" id="HSK1" value="01" disabled="disabled"> 一</label>
 			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK2" value="02"> 二</label>
 			<label class="btn btn-lg btn-success active"><input type="radio" name="HSK" id="HSK3" value="03" checked> 三</label>
-			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK4" value="04"> 四</label>
-			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK5" value="05"> 五</label>
-			<label class="btn btn-lg btn-success"><input type="radio" name="HSK" id="HSK6" value="06"> 六</label>
+			<label class="btn btn-lg btn-disabled"><input type="radio" name="HSK" id="HSK4" value="04" disabled="disabled"> 四</label>
+			<label class="btn btn-lg btn-disabled"><input type="radio" name="HSK" id="HSK5" value="05" disabled="disabled"> 五</label>
+			<label class="btn btn-lg btn-disabled"><input type="radio" name="HSK" id="HSK6" value="06" disabled="disabled"> 六</label>
 		</div>
 	</div>
 	<div class="form-group" data-toggle="buttons">
@@ -73,8 +75,8 @@
 			<label class="btn btn-lg btn-success"><input type="radio" name="Lesson" id="Lesson20" value="20"> 二十</label>
 		</div>
 	</div>
-</form>
-</div><!-- container -->
+	</form>
+</div><!-- head -->
 <div id="toggleBox" class="sticky-top">
 	<div id="option-container" class="btn-group btn-group-toggle sticky-top" data-toggle="buttons">
   		<label class="btn btn-success active">
@@ -88,7 +90,7 @@
 </div>
 <div id="audio-container">
 	<div class="row text-center">
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">一</div>
 			<div class="audCont">
 				<audio id="aud1" controls="controls">
@@ -96,7 +98,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn1" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">二</div>
 			<div class="audCont">
 			<audio id="aud2" controls="controls">
@@ -104,7 +106,9 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn2" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">三</div>
 			<div class="audCont">
 			<audio id="aud3" controls="controls">
@@ -112,9 +116,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn3" class="audbtn btn btn-default">◀</button></div>
 		</div>
-	</div>
-	<div class="row text-center">
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">四</div>
 			<div class="audCont">
 			<audio id="aud4" controls="controls">
@@ -122,7 +124,9 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn4" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">五</div>
 			<div class="audCont">
 			<audio id="aud5" controls="controls">
@@ -130,7 +134,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn5" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">六</div>
 			<div class="audCont">
 			<audio id="aud6" controls="controls">
@@ -140,7 +144,7 @@
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">七</div>
 			<div class="audCont">
 			<audio id="aud7" controls="controls">
@@ -148,7 +152,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn7" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">八</div>
 			<div class="audCont">
 			<audio id="aud8" controls="controls">
@@ -156,7 +160,9 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn8" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">九</div>
 			<div class="audCont">
 			<audio id="aud9" controls="controls">
@@ -164,9 +170,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn9" class="audbtn btn btn-default">◀</button></div>
 		</div>
-	</div>
-	<div class="row text-center">
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十</div>
 			<div class="audCont">
 			<audio id="aud10" controls="controls">
@@ -174,7 +178,9 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn10" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十一</div>
 			<div class="audCont">
 			<audio id="aud11" controls="controls">
@@ -182,7 +188,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn11" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十二</div>
 			<div class="audCont">
 			<audio id="aud12" controls="controls">
@@ -192,7 +198,7 @@
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十三</div>
 			<div class="audCont">
 			<audio id="aud13" controls="controls">
@@ -200,7 +206,7 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn13" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十四</div>
 			<div class="audCont">
 			<audio id="aud14" controls="controls">
@@ -208,7 +214,9 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn14" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十五</div>
 			<div class="audCont">
 			<audio id="aud15" controls="controls">
@@ -216,51 +224,49 @@
 			</div>
 			<div class="audX" lang="zh"><button id="btn15" class="audbtn btn btn-default">◀</button></div>
 		</div>
-	</div>
-	<div id="aud16-20">
-		<div class="row text-center">
-			<div class="col-xs-11 col-sm-4 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel aud16-20">
 			<div class="audX" lang="zh">十六</div>
-				<div class="audCont">
+			<div class="audCont">
 				<audio id="aud16" controls="controls">
 				<source id="src16" src="audio/03-01-16.m4a"></audio>
-				</div>
-				<div class="audX" lang="zh"><button id="btn16" class="audbtn btn btn-default">◀</button></div>
 			</div>
-			<div class="col-xs-11 col-sm-4 audLabel">
+			<div class="audX" lang="zh"><button id="btn16" class="audbtn btn btn-default">◀</button></div>
+		</div>
+	</div>
+	<div class="row text-center aud16-20">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十七</div>
-				<div class="audCont">
+			<div class="audCont">
 				<audio id="aud17" controls="controls">
 				<source id="src17" src="audio/03-01-17.m4a"></audio>
-				</div>
-				<div class="audX" lang="zh"><button id="btn17" class="audbtn btn btn-default">◀</button></div>
 			</div>
-			<div class="col-xs-11 col-sm-4 audLabel">
+			<div class="audX" lang="zh"><button id="btn17" class="audbtn btn btn-default">◀</button></div>
+		</div>
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十八</div>
-				<div class="audCont">
+			<div class="audCont">
 				<audio id="aud18" controls="controls">
 				<source id="src18" src="audio/03-01-18.m4a"></audio>
-				</div>
-				<div class="audX" lang="zh"><button id="btn18" class="audbtn btn btn-default">◀</button></div>
 			</div>
+			<div class="audX" lang="zh"><button id="btn18" class="audbtn btn btn-default">◀</button></div>
 		</div>
-		<div class="row text-center">
-			<div class="col-xs-11 col-sm-4 audLabel">
+	</div>
+	<div class="row text-center aud16-20">
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十九</div>
-				<div class="audCont">
+			<div class="audCont">
 				<audio id="aud19" controls="controls">
 				<source id="src19" src="audio/03-01-19.m4a"></audio>
-				</div>
-				<div class="audX" lang="zh"><button id="btn19" class="audbtn btn btn-default">◀</button></div>
 			</div>
-			<div class="col-xs-11 col-sm-4 audLabel">
+			<div class="audX" lang="zh"><button id="btn19" class="audbtn btn btn-default">◀</button></div>
+		</div>
+		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">二十</div>
-				<div class="audCont">
+			<div class="audCont">
 				<audio id="aud20" controls="controls">
 				<source id="src20" src="audio/03-01-20.m4a"></audio>
-				</div>
-				<div class="audX" lang="zh"><button id="btn20" class="audbtn btn btn-default">◀</button></div>
 			</div>
+			<div class="audX" lang="zh"><button id="btn20" class="audbtn btn btn-default">◀</button></div>
 		</div>
 	</div>
 </div> <!-- audio-container -->
@@ -289,11 +295,9 @@ $(document).ready(function() {
 		var len=21;
 		if($('input[name=HSK]:checked').val()<3){
 			len=16;
-			$('#btn16-20').hide();
-			$('#aud16-20').hide();
+			$('#btn16-20, .aud16-20').hide();
 		} else {
-			$('#btn16-20').show();
-			$('#aud16-20').show();
+			$('#btn16-20, .aud16-20').show();
 		}
 		var i;
 		for (i = 1; i < len; i++) {
