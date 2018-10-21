@@ -6,7 +6,7 @@ HSK2 Lessons: 1 thru 7<br/>
 HSK3 Lessons: 1 thru 20<br/>
 (<i>available as of 2018-10-17, more being added each day</i>)<br/>
 <br/>
-Allows students to practice the workbook listening exercises, textbook texts and textbook listening exercises.<br/>
+Allows students to practice the HSK workbook listening exercises.<br/>
 <br/>
 Demo of HTML5 implementation: <a href="https://www.stephenmccready.asia/mi/listen.php" target="_blank">https://www.stephenmccready.asia/mi/listen.php</a><br/>
 <br/>
