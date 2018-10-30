@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="HSK Workbook Audio Exercises">
+<meta name="keywords" content="Mandarin,Audio,HSK,Exercises">
+<meta property="og:title" content="HSK Workbook Audio Exercises">
+<meta property="og:description" content="Study the HSK Workbook using the Audio Exercises">
 <title>🎧  HSK 03-01</title>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -10,13 +14,13 @@
 *,html,body{margin:0;padding:0;}
 .container-fluid{margin:0;padding:0;}
 #head{padding:0.85em;background-color:#eee;}
-#toggleBox{padding:0 0.85em 0.85em 0.85em;background-color:#eee;}
+#toggleBox{padding:0 0.5em 0.5em 0.5em;background-color:#eee;}
 .btn-lg{min-width:2.85em;}
 .btn-group{margin-bottom:.25em;}
 .row label{width:100%;}
-#option-container{width:100%;}
+#option-container{width:100%;padding-top:.5em;}
 #option-container label{width:50%;}
-#HSKtitle{padding-top:.85em;}
+#HSKtitle{padding-top:.5em;}
 #audio-container{margin-top:2em;}
 .row{padding:0;margin:0;width:100%;}
 .audLabel{font-size:2em;padding:0;margin:0;}
@@ -179,7 +183,7 @@
 			<div class="audX" lang="zh"><button id="btn10" class="audbtn btn btn-default">◀</button></div>
 		</div>
 	</div>
-	<div class="row text-center">
+	<div class="row text-center aud11-15">
 		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十一</div>
 			<div class="audCont">
@@ -197,7 +201,7 @@
 			<div class="audX" lang="zh"><button id="btn12" class="audbtn btn btn-default">◀</button></div>
 		</div>
 	</div>
-	<div class="row text-center">
+	<div class="row text-center aud11-15">
 		<div class="col-xs-12 col-sm-6 audLabel">
 			<div class="audX" lang="zh">十三</div>
 			<div class="audCont">
@@ -216,7 +220,7 @@
 		</div>
 	</div>
 	<div class="row text-center">
-		<div class="col-xs-12 col-sm-6 audLabel">
+		<div class="col-xs-12 col-sm-6 audLabel aud11-15">
 			<div class="audX" lang="zh">十五</div>
 			<div class="audCont">
 			<audio id="aud15" controls="controls">
@@ -291,23 +295,29 @@ $(document).ready(function() {
     $('input[type=radio][name=HSK],input[type=radio][name=Lesson]').change(function(e) {
         e.preventDefault();
 		var audio;
-		var source;		
+		var source;
 		var len=21;
-		if($('input[name=HSK]:checked').val()<3){
-			len=16;
-			$('#btn16-20, .aud16-20').hide();
-		} else {
-			$('#btn16-20, .aud16-20').show();
+		switch($('input[name=HSK]:checked').val()){
+			case "01": case "02": 
+				len=16;
+				$('#btn16-20,.aud16-20').hide();break;
+			case "03":
+				$('#btn11-15,.aud11-15,#btn16-20,.aud16-20').show();break;
+			case "04":
+			case "05":
+			case "06":
+				len=11;
+				$('#btn11-15,.aud11-15,#btn16-20,.aud16-20').hide();break;
 		}
 		var i;
-		for (i = 1; i < len; i++) {
-			audio = document.getElementById('aud'+i.toString());
-			source = document.getElementById('src'+i.toString());
+		for (i=1;i<len;i++) {
+			audio=document.getElementById('aud'+i.toString());
+			source=document.getElementById('src'+i.toString());
 			if(i<10){
-				source.src = "audio/"
+				source.src="audio/"
 					+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val()+"-0"+i.toString()+".m4a";
 			} else {
-				source.src = "audio/"
+				source.src="audio/"
 					+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val()+"-"+i.toString()+".m4a";
 			}
 			audio.load();
@@ -331,12 +341,12 @@ $(document).ready(function() {
    	
    	$("button, input[type='button']").click(function() {
    		var id=this.id.replace(/btn/gi, "aud");
-  		var aud = document.getElementById(id);
-  		var newTime = aud.currentTime;
+  		var aud=document.getElementById(id);
+  		var newTime=aud.currentTime;
   		if(newTime>2.5) {
-  			newTime = newTime-2.5;
+  			newTime=newTime-2.5;
   		} else {
-  			newTime = 0;
+  			newTime=0;
   		}
 		aud.currentTime=newTime;
    	});
@@ -344,8 +354,7 @@ $(document).ready(function() {
    	$('#text-container').hide();
    	loadText();
 	$(document).attr("title", "🎧  HSK "+$('input[name=HSK]:checked').val()+"-"+$('input[name=Lesson]:checked').val());
-	$('#HSKtitle').html("HSK "+$('input[name=HSK]:checked').val().replace(/^[0]+/g,"")
-							+"&nbsp;课 "+$('input[name=Lesson]:checked').val().replace(/^[0]+/g,""));
+	$('#HSKtitle').html("HSK "+$('input[name=HSK]:checked').val()+"&nbsp;课 "+$('input[name=Lesson]:checked').val());
 }); /* $(document).ready */
 function loadText() {
 	$("#text-container").html("");
@@ -354,7 +363,7 @@ function loadText() {
 		if (request.readyState===4) {
 			if (request.status===200) {
 				var textArray=JSON.parse(request.responseText);
-				for (var i = 0; i < textArray.length; i++) {
+				for (var i=0; i < textArray.length; i++) {
 					var x;
 					switch(textArray[i].id){
 						case "1":x="一";break;case "2":x="二";break;case "3":x="三";break;case "4":x="四";break;
