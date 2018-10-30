@@ -2,9 +2,13 @@
 汉语水平考试 Hànyǔ Shuǐpíng Kǎoshì (HSK) mini program<br/>
 <br/>
 Work in progress:<br/>
-HSK2 Lessons: 1 thru 8<br/>
+HSK1 Lessons: none<br/>
+HSK2 Lessons: 1 thru 10<br/>
 HSK3 Lessons: 1 thru 20<br/>
-(<i>available as of 2018-10-17, more being added each day</i>)<br/>
+HSK4 Lessons: none<br/>
+HSK5 Lessons: none<br/>
+HSK6 Lessons: none<br/>
+(<i>as of 2018-10-30, more being added each week</i>)<br/>
 <br/>
 Allows students to practice the HSK workbook listening exercises.<br/>
 <br/>
