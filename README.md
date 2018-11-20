@@ -3,12 +3,12 @@
 <br/>
 Work in progress:<br/>
 HSK1 Lessons: none<br/>
-HSK2 Lessons: 1 thru 13<br/>
+HSK2 Lessons: 1 thru 15<br/>
 HSK3 Lessons: 1 thru 20<br/>
 HSK4 Lessons: none<br/>
 HSK5 Lessons: none<br/>
 HSK6 Lessons: none<br/>
-(<i>as of 2018-11-14, more being added each week</i>)<br/>
+(<i>as of 2018-11-20, more being added each week</i>)<br/>
 <br/>
 Allows students to practice the HSK workbook listening exercises.<br/>
 <br/>
