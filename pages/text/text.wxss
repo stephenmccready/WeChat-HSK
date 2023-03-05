@@ -1,4 +1,0 @@
-.lineNum{font-weight:bold;text-align:center;}
-.line{clear:both;}
-.answer{background-color:ghostwhite;padding:10rpx 0rpx 10rpx 10rpx;margin-bottom:50rpx;}
-.footer{height:150rpx;}

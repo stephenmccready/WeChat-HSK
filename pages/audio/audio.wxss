@@ -1,9 +1,0 @@
-.btn-container{display:inline;}
-.btns{float:right;height:134rpx; width:120rpx;}
-.vcrPlay{font-size:0rpx;display:inline;}
-.spacer{height:20rpx;clear:both;}
-.vcrBtn{display:inline-block;margin:5rpx;width:100rpx;}
-image{width:50rpx;height:50rpx;padding-left:25rpx;padding-right:25rpx;
-border:1px solid #d9d9d9;}
-.container{text-align:center;}
-progress{position:sticky;top:0;margin-bottom:10rpx;}

@@ -1,4 +1,0 @@
-.radio-container {display:inline-block;}
-.radio-name-container {display:inline-block;min-width:25rpx;text-align:left;}
-.radio-main{display:inline-block;width:75rpx;text-align:center;}
-.page-section{margin-top:50rpx;}
